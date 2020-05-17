@@ -35,6 +35,8 @@ set(GAME_SOURCES
   efg_game.h
   efg_game_data.cc
   efg_game_data.h
+  exploding_kittens.cc
+  exploding_kittens.h
   first_sealed_auction.cc
   first_sealed_auction.h
   gin_rummy.cc
@@ -234,6 +236,10 @@ add_test(deep_sea_test deep_sea_test)
 add_executable(efg_game_test efg_game_test.cc ${OPEN_SPIEL_OBJECTS}
                $<TARGET_OBJECTS:tests>)
 add_test(efg_game_test efg_game_test)
+
+add_executable(exploding_kittens_test exploding_kittens_test.cc ${OPEN_SPIEL_OBJECTS}
+               $<TARGET_OBJECTS:tests>)
+add_test(exploding_kittens_test exploding_kittens_test)
 
 add_executable(first_sealed_auction_test first_sealed_auction_test.cc
                ${OPEN_SPIEL_OBJECTS}
